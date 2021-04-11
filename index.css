@@ -15,12 +15,15 @@
 }
 
 body, h1, h2, h3, h4, p {
-    margin: 0
+    margin: 0;
 }
 
 html {
     width: 100vw;
+    height: 100%;
     font-size: 62.5%;
+    background-color: var(--clr-primary-300);
+
 }
 
 body {
@@ -29,6 +32,10 @@ body {
     font-size: 1.3125rem;
     line-height: 1.6;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -92,19 +99,22 @@ h3  {
 .projects h2 {
     margin: 2rem auto;
     text-align: center;
-    width: 80%;
+    width: 100%;
     /* margin-bottom: 2rem; */
 }
 .project-container {
     flex: 1 1 350px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     margin-top: 10px;
 }
 
-
+.project-container h3 {
+    width: max-content;
+    text-align: center;
+}
 .project-container img {
     width: 70%;
     margin: 1em auto;
@@ -122,6 +132,7 @@ h3  {
     color: var(--clr-primary-300);
     max-width: 900px;
     border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 .about p {
@@ -130,6 +141,8 @@ h3  {
 .contact {
     background-color: var(--clr-primary-400);
     color: var(--clr-primary-300);
+    position: relative;
+    top: 50px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -156,7 +169,7 @@ h3  {
     flex: 1 0.5 150px;
     margin: 2%;
     font-size: 1.6rem;
-    max-width: max(25%, 150px);
+    max-width: 100px;
 }
 
 .contact ul a:hover {
@@ -164,16 +177,18 @@ h3  {
     border-radius: 25px;
     transition: 200ms ease-in-out border background-color;
 }
+
 li {
     width: 50%;
     margin: auto;
     margin-top: 10px;
 }
+
 img {
     width: 100%;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 450px) {
     
     .projects{
         margin-top: 10%;
@@ -191,7 +206,7 @@ img {
         font-size: 2.4rem;
     }
     p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     .projects h3 {
         font-size: 2.2rem;
